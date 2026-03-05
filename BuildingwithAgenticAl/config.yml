@@ -1,0 +1,87 @@
+# ============================================================
+# Weather Agent Configuration
+# ============================================================
+# Switch between models by changing "active_model" below.
+# Add new models by creating a new section under "models".
+# ============================================================
+
+# Which model to use (must match a key under "models" below)
+# Workshop default: claude_45_sonnet
+# For cheap testing: nova_micro
+active_model: claude_35_haiku
+
+# AWS Configuration
+aws:
+  region: us-east-1
+
+# Model Profiles
+# ---------------------------------------------------------------
+# Add as many as you want. Just set "active_model" above to
+# the key name to switch.
+# ---------------------------------------------------------------
+models:
+  # Amazon Nova Micro 1.0 -- Cheapest, great for testing/debugging
+  nova_micro:
+    model_id: us.amazon.nova-micro-v1:0
+    description: Amazon Nova Micro 1.0 -- Fast and cheap, ideal for testing
+    temperature: 0.3
+    max_tokens: 1024
+    streaming: true
+    cost_per_1k_input_tokens: 0.000035
+    cost_per_1k_output_tokens: 0.00014
+
+  # Anthropic Claude 3.5 Haiku -- Fast, affordable, good reasoning
+  claude_35_haiku:
+    model_id: us.anthropic.claude-3-5-haiku-20241022-v1:0
+    description: Claude 3.5 Haiku -- Balance of speed, cost, and intelligence
+    temperature: 0.3
+    max_tokens: 2048
+    streaming: true
+    cost_per_1k_input_tokens: 0.0008
+    cost_per_1k_output_tokens: 0.004
+
+  # Anthropic Claude 4.5 Sonnet -- Workshop default model
+  claude_45_sonnet:
+    model_id: us.anthropic.claude-sonnet-4-5-20250929-v1:0
+    description: Claude 4.5 Sonnet -- Workshop default, frontier intelligence
+    temperature: 0.7
+    max_tokens: 2000
+    streaming: false
+    cost_per_1k_input_tokens: 0.003
+    cost_per_1k_output_tokens: 0.015
+
+  # Anthropic Claude 3.5 Sonnet -- High reasoning, production-grade
+  claude_35_sonnet:
+    model_id: us.anthropic.claude-3-5-sonnet-20241022-v2:0
+    description: Claude 3.5 Sonnet v2 -- High reasoning, best for production
+    temperature: 0.3
+    max_tokens: 4096
+    streaming: true
+    cost_per_1k_input_tokens: 0.003
+    cost_per_1k_output_tokens: 0.015
+
+  # Amazon Nova Lite -- Good middle ground for Amazon models
+  nova_lite:
+    model_id: us.amazon.nova-lite-v1:0
+    description: Amazon Nova Lite -- More capable than Micro, still affordable
+    temperature: 0.3
+    max_tokens: 2048
+    streaming: true
+    cost_per_1k_input_tokens: 0.00006
+    cost_per_1k_output_tokens: 0.00024
+
+  # Amazon Nova Pro -- Most capable Amazon model
+  nova_pro:
+    model_id: us.amazon.nova-pro-v1:0
+    description: Amazon Nova Pro -- Most capable Nova model
+    temperature: 0.3
+    max_tokens: 4096
+    streaming: true
+    cost_per_1k_input_tokens: 0.0008
+    cost_per_1k_output_tokens: 0.0032
+
+# Agent Configuration
+agent:
+  name: Weather Agent
+  version: 1.0.0
+  description: Agentic AI weather forecasting assistant using NWS API

@@ -1,0 +1,9 @@
+# Create requirements.txt file
+
+boto3>=1.34.0
+streamlit>=1.28.0
+requests>=2.31.0
+Pillow>=10.0.0
+strands-agents
+strands-agents-tools
+pyyaml
