@@ -25,7 +25,7 @@ from datetime import datetime
 # =============================================================
 # Configuration Loader
 # =============================================================
-def load_config(config_path="C:\\Misc\\Dataengineering\\Projects\\agentic-ai-workshop\\BuildingwithAgenticAl\\config.yml"):
+def load_config(config_path="config.yml"):
     """Load configuration from config.yaml."""
     try:
         with open(config_path, "r") as f:

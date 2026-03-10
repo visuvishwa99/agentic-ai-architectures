@@ -8,7 +8,7 @@
 # Which model to use (must match a key under "models" below)
 # Workshop default: claude_45_sonnet
 # For cheap testing: nova_micro
-active_model: claude_35_haiku
+active_model: nova_micro
 
 # AWS Configuration
 aws:
