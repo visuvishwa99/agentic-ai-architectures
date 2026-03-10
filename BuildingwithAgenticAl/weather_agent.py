@@ -3,7 +3,6 @@ Weather Agent CLI - Agentic AI Building Blocks Workshop
 ========================================================
 Uses boto3 (AWS SDK) + Amazon Bedrock + NWS API
 
-This follows the workshop's architecture exactly:
 - boto3.client('bedrock-runtime') for direct Bedrock API calls
 - subprocess/curl for HTTP requests to NWS API
 - Claude for planning (generate API URLs) and analysis (summarize weather)
