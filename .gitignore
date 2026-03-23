@@ -1,1 +1,27 @@
-.venv
+# Virtual environments
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# AgentCore (deployment artifacts + config)
+.bedrock_agentcore/
+.bedrock_agentcore.yaml
+.agentcore/
+.dockerignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
