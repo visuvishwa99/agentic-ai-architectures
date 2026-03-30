@@ -2,6 +2,9 @@
 .venv/
 venv/
 
+.continue/
+continue/
+
 # Python
 __pycache__/
 *.pyc
@@ -25,3 +28,4 @@ build/
 # OS
 .DS_Store
 Thumbs.db
+
