@@ -1,0 +1,6 @@
+---
+name: rewrite
+description: Rewrite and improvise sentence structure
+invokable: true
+---
+Act as a professional technical editor. Rewrite the provided text to improve sentence structure, flow, and clarity. Correct all grammatical errors and ensure a professional, concise tone suitable for documentation or pull request descriptions.

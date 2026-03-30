@@ -1,0 +1,6 @@
+---
+name: explain
+description: Explain logic for Data Pipelines
+invokable: true
+---
+Explain this code step by step. Focus on the data flow, transformation logic, and potential bottlenecks in the pipeline. Use analogies where helpful.
